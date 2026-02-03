@@ -2,8 +2,8 @@ import { ArrowRight, TrendingUp, Percent } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
-  const scrollToForm = () => {
-    document.getElementById('lead-form')?.scrollIntoView({ behavior: 'smooth' });
+  const openFeishuForm = () => {
+    window.open('https://my.feishu.cn/base/PbOGbNyDTafAgjsCVanc5nNknEf?table=tblF2uHEbr9qyOBj&view=vewVVTKBvh', '_blank');
   };
 
   return (
@@ -70,7 +70,7 @@ const HeroSection = () => {
           {/* CTA Button */}
           <div className="animate-fade-up" style={{ animationDelay: '0.4s' }}>
             <Button 
-              onClick={scrollToForm}
+              onClick={openFeishuForm}
               size="lg"
               className="group bg-gold-gradient text-primary font-semibold px-8 py-6 text-lg rounded-xl shadow-gold hover:shadow-xl hover:scale-105 transition-all duration-300"
             >
