@@ -1,86 +1,14 @@
-import { useState } from "react";
-import { Building2, User, Phone, ArrowRight, CheckCircle, Loader2 } from "lucide-react";
+import { Building2, User, Phone, ArrowRight, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { useToast } from "@/hooks/use-toast";
+
+const FEISHU_FORM_URL = "https://my.feishu.cn/base/PbOGbNyDTafAgjsCVanc5nNknEf?table=tblF2uHEbr9qyOBj&view=vewVVTKBvh";
 
 const LeadForm = () => {
-  const { toast } = useToast();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const [formData, setFormData] = useState({
-    uen: "",
-    contactName: "",
-    whatsapp: "",
-  });
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    try {
-      // Replace with your Feishu/Lark Multitable Webhook URL
-      const webhookUrl = "YOUR_FEISHU_WEBHOOK_URL_HERE";
-      
-      // For demo purposes, we'll simulate the submission
-      // In production, uncomment the fetch below and replace the URL
-      /*
-      await fetch(webhookUrl, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          uen: formData.uen,
-          contactName: formData.contactName,
-          whatsapp: formData.whatsapp,
-          submittedAt: new Date().toISOString(),
-        }),
-      });
-      */
-      
-      // Simulate API delay
-      await new Promise((resolve) => setTimeout(resolve, 1500));
-      
-      setIsSubmitted(true);
-      toast({
-        title: "Submission Successful!",
-        description: "Our legal-compliance team will contact you via WhatsApp within 2 hours.",
-      });
-    } catch (error) {
-      toast({
-        title: "Submission Failed",
-        description: "Please try again or contact us directly.",
-        variant: "destructive",
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
+  const openFeishuForm = () => {
+    window.open(FEISHU_FORM_URL, '_blank');
   };
-
-  if (isSubmitted) {
-    return (
-      <section id="lead-form" className="py-20 bg-hero-gradient">
-        <div className="container mx-auto px-6">
-          <div className="max-w-lg mx-auto">
-            <div className="bg-card rounded-3xl p-10 shadow-2xl border border-border text-center">
-              <div className="w-20 h-20 rounded-full bg-emerald-100 flex items-center justify-center mx-auto mb-6">
-                <CheckCircle className="w-10 h-10 text-emerald-600" />
-              </div>
-              <h3 className="font-display text-2xl font-bold text-foreground mb-4">
-                Thank You!
-              </h3>
-              <p className="text-muted-foreground">
-                Our legal-compliance team will contact you via WhatsApp within{" "}
-                <span className="font-semibold text-gold-dark">2 hours</span>.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-    );
-  }
 
   return (
     <section id="lead-form" className="py-20 bg-hero-gradient relative overflow-hidden">
@@ -101,7 +29,7 @@ const LeadForm = () => {
             </p>
           </div>
 
-          <form onSubmit={handleSubmit} className="bg-card rounded-3xl p-8 md:p-10 shadow-2xl border border-border">
+          <div className="bg-card rounded-3xl p-8 md:p-10 shadow-2xl border border-border">
             <div className="space-y-6">
               {/* UEN Field */}
               <div className="space-y-2">
@@ -113,10 +41,8 @@ const LeadForm = () => {
                   id="uen"
                   type="text"
                   placeholder="e.g., 202312345A"
-                  value={formData.uen}
-                  onChange={(e) => setFormData({ ...formData, uen: e.target.value })}
-                  required
                   className="h-12 rounded-xl border-border focus:border-gold focus:ring-gold/20"
+                  disabled
                 />
               </div>
 
@@ -130,10 +56,8 @@ const LeadForm = () => {
                   id="contactName"
                   type="text"
                   placeholder="Your full name"
-                  value={formData.contactName}
-                  onChange={(e) => setFormData({ ...formData, contactName: e.target.value })}
-                  required
                   className="h-12 rounded-xl border-border focus:border-gold focus:ring-gold/20"
+                  disabled
                 />
               </div>
 
@@ -147,30 +71,19 @@ const LeadForm = () => {
                   id="whatsapp"
                   type="tel"
                   placeholder="+65 9XXX XXXX"
-                  value={formData.whatsapp}
-                  onChange={(e) => setFormData({ ...formData, whatsapp: e.target.value })}
-                  required
                   className="h-12 rounded-xl border-border focus:border-gold focus:ring-gold/20"
+                  disabled
                 />
               </div>
 
-              {/* Submit Button */}
+              {/* CTA Button */}
               <Button
-                type="submit"
-                disabled={isSubmitting}
-                className="w-full h-14 bg-gold-gradient text-primary font-semibold text-lg rounded-xl shadow-gold hover:shadow-xl hover:scale-[1.02] transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed"
+                type="button"
+                onClick={openFeishuForm}
+                className="w-full h-14 bg-gold-gradient text-primary font-semibold text-lg rounded-xl shadow-gold hover:shadow-xl hover:scale-[1.02] transition-all duration-300"
               >
-                {isSubmitting ? (
-                  <>
-                    <Loader2 className="mr-2 w-5 h-5 animate-spin" />
-                    Submitting...
-                  </>
-                ) : (
-                  <>
-                    Get My Grant Blueprint
-                    <ArrowRight className="ml-2 w-5 h-5" />
-                  </>
-                )}
+                Get My Grant Blueprint
+                <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
             </div>
 
@@ -187,7 +100,7 @@ const LeadForm = () => {
                 </span>
               </div>
             </div>
-          </form>
+          </div>
         </div>
       </div>
     </section>
