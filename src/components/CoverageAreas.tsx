@@ -6,42 +6,42 @@ const areas = [
     label: "AI Adoption", 
     tag: "SPRING",
     badge: "Active Cycle",
-    value: "Up to S$30k" 
+    value: "S$250k–500k" 
   },
   { 
     icon: Globe, 
     label: "Global Expansion", 
     tag: "MRA",
     badge: "Funding Available",
-    value: "Up to S$100k" 
+    value: "S$100k/市场" 
   },
   { 
     icon: Leaf, 
     label: "Sustainability", 
     tag: "ESG Grant",
     badge: "Active Cycle",
-    value: "Up to S$50k" 
+    value: "S$30k (Sprout)" 
   },
   { 
     icon: Zap, 
     label: "Productivity Upgrade", 
     tag: "PSG",
     badge: "Funding Available",
-    value: "Up to S$50k" 
+    value: "S$30k" 
   },
   { 
     icon: Users, 
     label: "Talent Development", 
     tag: "SCTP",
     badge: "Active Cycle",
-    value: "Up to S$70k" 
+    value: "S$10k/年" 
   },
   { 
     icon: Award, 
     label: "Intellectual Property", 
     tag: "IP Grant",
     badge: "Funding Available",
-    value: "Up to S$40k" 
+    value: "S$20k" 
   },
 ];
 
