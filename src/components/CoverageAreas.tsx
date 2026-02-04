@@ -1,12 +1,12 @@
 import { Brain, Globe, Leaf, Zap, Users, Award } from "lucide-react";
 
 const areas = [
-  { icon: Brain, label: "AI Adoption", tag: "#AI_Adoption" },
-  { icon: Globe, label: "Global Expansion", tag: "#Global_Expansion" },
-  { icon: Leaf, label: "Sustainability", tag: "#Sustainability" },
-  { icon: Zap, label: "Productivity Upgrade", tag: "#Productivity_Upgrade" },
-  { icon: Users, label: "Talent Development", tag: "#Talent_Development" },
-  { icon: Award, label: "Intellectual Property", tag: "#Intellectual_Property" },
+  { icon: Brain, label: "AI Adoption", tag: "SPRING" },
+  { icon: Globe, label: "Global Expansion", tag: "MRA" },
+  { icon: Leaf, label: "Sustainability", tag: "ESG Grant" },
+  { icon: Zap, label: "Productivity Upgrade", tag: "PSG" },
+  { icon: Users, label: "Talent Development", tag: "SCTP" },
+  { icon: Award, label: "Intellectual Property", tag: "IP Grant" },
 ];
 
 const CoverageAreas = () => {
