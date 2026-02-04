@@ -1,76 +1,41 @@
-import { Menu, X } from "lucide-react";
-import { useState } from "react";
-
+import { useState, useEffect } from "react";
+import { Menu, X, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 const Header = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+  const handleHeroCTA = () => {
+    window.open("https://my.feishu.cn/base/PbOGbNyDTafAgjsCVanc5nNknEf?table=tblF2uHEbr9qyOBj&view=vewVVTKBvh", "_blank");
+  };
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-primary/95 backdrop-blur-md border-b border-primary-foreground/10">
-      <div className="container mx-auto px-6">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-emerald-gradient flex items-center justify-center shadow-emerald">
-              <span className="text-primary font-bold text-lg">SG</span>
-            </div>
-            <span className="font-display font-bold text-xl text-primary-foreground hidden sm:block">
-              SG Grant Consultancy
-            </span>
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-white/80 backdrop-blur-lg shadow-sm py-4" : "bg-transparent py-6"}`}>
+      <div className="container mx-auto px-6 flex items-center justify-between">
+        <div className="flex items-center gap-2 cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+          <div className="w-10 h-10 bg-green-500 rounded-lg flex items-center justify-center shadow-lg shadow-green-500/20">
+            <span className="text-white font-bold text-xl">SG</span>
           </div>
-
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
-            <a href="#values" className="text-sm text-primary-foreground/70 hover:text-emerald transition-colors">
-              Why Us
-            </a>
-            <a href="#coverage" className="text-sm text-primary-foreground/70 hover:text-emerald transition-colors">
-              Coverage
-            </a>
-            <a href="#success-stories" className="text-sm text-primary-foreground/70 hover:text-emerald transition-colors">
-              Success Stories
-            </a>
-          </nav>
-
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden p-2 text-primary-foreground"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+          <span className="text-xl font-display font-bold tracking-tight text-slate-900">GrantBright <span className="text-green-600">AI</span></span>
         </div>
-
-        {/* Mobile Navigation */}
-        {isMobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-primary-foreground/10">
-            <nav className="flex flex-col gap-4">
-              <a 
-                href="#values" 
-                className="text-primary-foreground/70 hover:text-emerald transition-colors py-2"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Why Us
-              </a>
-              <a 
-                href="#coverage" 
-                className="text-primary-foreground/70 hover:text-emerald transition-colors py-2"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Coverage
-              </a>
-              <a 
-                href="#success-stories" 
-                className="text-primary-foreground/70 hover:text-emerald transition-colors py-2"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Success Stories
-              </a>
-            </nav>
-          </div>
-        )}
+        <nav className="hidden md:flex items-center gap-8">
+          <a href="#values" className="text-sm font-medium text-slate-600 hover:text-green-600 transition-colors">Why Us</a>
+          <a href="#coverage" className="text-sm font-medium text-slate-600 hover:text-green-600 transition-colors">Coverage</a>
+          <a href="#success-stories" className="text-sm font-medium text-slate-600 hover:text-green-600 transition-colors">Success Stories</a>
+          <Button onClick={handleHeroCTA} className="bg-green-600 hover:bg-green-700 text-white rounded-full px-6 shadow-md hover:shadow-lg transition-all">
+            Get Started
+          </Button>
+        </nav>
+        <button className="md:hidden text-slate-900" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+          {isMobileMenuOpen ? <X /> : <Menu />}
+        </button>
       </div>
     </header>
   );
 };
-
 export default Header;
