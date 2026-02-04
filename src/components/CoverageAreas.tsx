@@ -13,7 +13,7 @@ const areas = [
     label: "Global Expansion", 
     tag: "MRA",
     badge: "Funding Available",
-    value: "S$100k/市场" 
+    value: "S$100k/market" 
   },
   { 
     icon: Leaf, 
@@ -34,7 +34,7 @@ const areas = [
     label: "Talent Development", 
     tag: "SCTP",
     badge: "Active Cycle",
-    value: "S$10k/年" 
+    value: "S$10k/year" 
   },
   { 
     icon: Award, 
