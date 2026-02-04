@@ -2,8 +2,8 @@ import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import CoreValues from "@/components/CoreValues";
 import CoverageAreas from "@/components/CoverageAreas";
-import WorkflowSection from "@/components/WorkflowSection";
-import LeadForm from "@/components/LeadForm";
+import SuccessStories from "@/components/SuccessStories";
+import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -15,13 +15,9 @@ const Index = () => {
         <div id="values">
           <CoreValues />
         </div>
-        <div id="coverage">
-          <CoverageAreas />
-        </div>
-        <div id="process">
-          <WorkflowSection />
-        </div>
-        <LeadForm />
+        <CoverageAreas />
+        <SuccessStories />
+        <FinalCTA />
       </main>
       <Footer />
     </div>
