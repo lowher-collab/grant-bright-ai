@@ -1,0 +1,120 @@
+{
+    "header": {
+        "brand": "GrantBright AI",
+        "nav": {
+            "whyUs": "Why Us",
+            "coverage": "Coverage",
+            "successStories": "Success Stories",
+            "getStarted": "Get Started"
+        }
+    },
+    "hero": {
+        "badge": "Singapore Government Grants Specialists",
+        "heading": "Stop Leaving Your Growth Capital on the Table.",
+        "subheading": "Last year, Singapore SMEs missed over <strong>S$50M</strong> in unclaimed grants. Find out your recovery potential in 60 seconds.",
+        "cta": "Check My Grant Eligibility Now",
+        "loading": "AI is scanning latest ESG guidelines..."
+    },
+    "coreValues": {
+        "title": "Why Choose Us",
+        "subtitle": "Built on trust, powered by technology",
+        "values": {
+            "compliance": {
+                "title": "Compliance",
+                "description": "Lawyer-backed, audit-ready."
+            },
+            "experience": {
+                "title": "Experience",
+                "description": "Deep industry insights."
+            },
+            "aiPowered": {
+                "title": "AI-Powered",
+                "description": "Instant policy matching."
+            }
+        }
+    },
+    "coverageAreas": {
+        "title": "Grant Coverage Areas",
+        "subtitle": "Comprehensive support across key business growth sectors",
+        "areas": {
+            "aiAdoption": {
+                "label": "AI Adoption",
+                "tag": "SPRING",
+                "badge": "Active Cycle",
+                "value": "S$250k–500k"
+            },
+            "globalExpansion": {
+                "label": "Global Expansion",
+                "tag": "MRA",
+                "badge": "Funding Available",
+                "value": "S$100k/market"
+            },
+            "sustainability": {
+                "label": "Sustainability",
+                "tag": "ESG Grant",
+                "badge": "Active Cycle",
+                "value": "S$30k (Sprout)"
+            },
+            "productivity": {
+                "label": "Productivity Upgrade",
+                "tag": "PSG",
+                "badge": "Funding Available",
+                "value": "S$30k"
+            },
+            "talent": {
+                "label": "Talent Development",
+                "tag": "SCTP",
+                "badge": "Active Cycle",
+                "value": "S$10k/year"
+            },
+            "ip": {
+                "label": "Intellectual Property",
+                "tag": "IP Grant",
+                "badge": "Funding Available",
+                "value": "S$20k"
+            }
+        }
+    },
+    "successStories": {
+        "title": "Success Stories",
+        "subtitle": "Real results from Singapore SMEs who recovered their unclaimed grants",
+        "outcome": "Outcome:",
+        "stories": {
+            "story1": {
+                "role": "Local F&B Chain Founder",
+                "quote": "We recovered S$12,400 in digital subsidies we didn't know existed.",
+                "outcome": "S$12.4k Recovered",
+                "grant": "PSG"
+            },
+            "story2": {
+                "role": "Tech Trading SME MD",
+                "quote": "The MRA mapping was instant and clarified S$85k in expansion costs.",
+                "outcome": "S$85k Approved",
+                "grant": "MRA"
+            },
+            "story3": {
+                "role": "Logistics Operations Head",
+                "quote": "Caught the productivity grant deadline just in time. Seamless process.",
+                "outcome": "S$32k Secured",
+                "grant": "EDG"
+            }
+        }
+    },
+    "finalCTA": {
+        "title": "Ready to recover your unclaimed capital?",
+        "button": "Check Eligibility Now"
+    },
+    "footer": {
+        "trustSignals": {
+            "smes": "Built for Singapore SMEs",
+            "framework": "Aligned with Enterprise Singapore (ESG) Framework",
+            "security": "Bank-Grade Security"
+        },
+        "brand": "SG Grant Consultancy",
+        "copyright": "All rights reserved.",
+        "links": {
+            "privacy": "Privacy Policy",
+            "terms": "Terms of Service"
+        }
+    }
+}

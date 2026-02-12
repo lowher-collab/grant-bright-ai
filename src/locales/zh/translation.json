@@ -1,0 +1,120 @@
+{
+    "header": {
+        "brand": "智能补贴助手",
+        "nav": {
+            "whyUs": "选择我们",
+            "coverage": "补贴类别",
+            "successStories": "成功案例",
+            "getStarted": "立即开始"
+        }
+    },
+    "hero": {
+        "badge": "新加坡政府补贴专家",
+        "heading": "不要错过你的政府补贴",
+        "subheading": "去年，新加坡中小企业错失了超过 <strong>5000万新元</strong> 的未申领补助金。60秒了解您的可申领潜力。",
+        "cta": "立即检查补贴资格",
+        "loading": "AI 正在扫描最新 ESG 指南..."
+    },
+    "coreValues": {
+        "title": "选择我们",
+        "subtitle": "信任为本，科技驱动",
+        "values": {
+            "compliance": {
+                "title": "合规性",
+                "description": "专业律师，可审计"
+            },
+            "experience": {
+                "title": "专业经验",
+                "description": "深厚行业洞察"
+            },
+            "aiPowered": {
+                "title": "AI 驱动",
+                "description": "即时政策匹配"
+            }
+        }
+    },
+    "coverageAreas": {
+        "title": "补贴覆盖领域",
+        "subtitle": "全面支持关键业务增长领域",
+        "areas": {
+            "aiAdoption": {
+                "label": "AI 应用",
+                "tag": "SPRING",
+                "badge": "开放申请",
+                "value": "S$250k–500k"
+            },
+            "globalExpansion": {
+                "label": "全球拓展",
+                "tag": "MRA",
+                "badge": "可申请资金",
+                "value": "S$100k/市场"
+            },
+            "sustainability": {
+                "label": "可持续发展",
+                "tag": "ESG 补贴",
+                "badge": "开放申请",
+                "value": "S$30k (Sprout)"
+            },
+            "productivity": {
+                "label": "生产力提升",
+                "tag": "PSG",
+                "badge": "可申请资金",
+                "value": "S$30k"
+            },
+            "talent": {
+                "label": "人才培养",
+                "tag": "SCTP",
+                "badge": "开放申请",
+                "value": "S$10k/年"
+            },
+            "ip": {
+                "label": "知识产权",
+                "tag": "IP 补贴",
+                "badge": "可申请资金",
+                "value": "S$20k"
+            }
+        }
+    },
+    "successStories": {
+        "title": "成功案例",
+        "subtitle": "新加坡中小企业成功申领补贴的真实案例",
+        "outcome": "结果：",
+        "stories": {
+            "story1": {
+                "role": "本地餐饮连锁创始人",
+                "quote": "我们申领到了 S$12,400 的数字化补贴，之前完全不知道有这个项目。",
+                "outcome": "S$12.4k 已申领",
+                "grant": "PSG"
+            },
+            "story2": {
+                "role": "科技贸易中小企业董事总经理",
+                "quote": "MRA 匹配非常迅速，明确了 S$85k 的扩展成本。",
+                "outcome": "S$85k 已批准",
+                "grant": "MRA"
+            },
+            "story3": {
+                "role": "物流运营主管",
+                "quote": "及时赶上了生产力补贴的截止日期。申请流程非常顺畅。",
+                "outcome": "S$32k 已获得",
+                "grant": "EDG"
+            }
+        }
+    },
+    "finalCTA": {
+        "title": "准备好申领您的补贴了吗？",
+        "button": "立即检查资格"
+    },
+    "footer": {
+        "trustSignals": {
+            "smes": "专为新加坡中小企业打造",
+            "framework": "符合新加坡企业发展局 (ESG) 框架",
+            "security": "银行级安全保障"
+        },
+        "brand": "新加坡资助咨询",
+        "copyright": "版权所有",
+        "links": {
+            "privacy": "隐私政策",
+            "terms": "服务条款"
+        }
+    }
+}

@@ -1,6 +1,8 @@
 import { Shield, Building2, Globe } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
 
   return (
@@ -10,15 +12,15 @@ const Footer = () => {
         <div className="flex flex-wrap items-center justify-center gap-6 md:gap-10 mb-8 pb-8 border-b border-primary-foreground/10">
           <div className="flex items-center gap-2 text-sm text-primary-foreground/60">
             <Building2 className="w-4 h-4 text-emerald" />
-            <span>Built for Singapore SMEs</span>
+            <span>{t('footer.trustSignals.smes')}</span>
           </div>
           <div className="flex items-center gap-2 text-sm text-primary-foreground/60">
             <Globe className="w-4 h-4 text-emerald" />
-            <span>Aligned with Enterprise Singapore (ESG) Framework</span>
+            <span>{t('footer.trustSignals.framework')}</span>
           </div>
           <div className="flex items-center gap-2 text-sm text-primary-foreground/60">
             <Shield className="w-4 h-4 text-emerald" />
-            <span>Bank-Grade Security</span>
+            <span>{t('footer.trustSignals.security')}</span>
           </div>
         </div>
 
@@ -30,20 +32,20 @@ const Footer = () => {
               <span className="text-primary font-bold text-sm">SG</span>
             </div>
             <span className="font-display font-semibold text-primary-foreground">
-              SG Grant Consultancy
+              {t('footer.brand')}
             </span>
           </div>
 
           <p className="text-sm text-primary-foreground/40">
-            © {currentYear} SG Grant Consultancy. All rights reserved.
+            © {currentYear} {t('footer.brand')}. {t('footer.copyright')}
           </p>
 
           <div className="flex items-center gap-6">
             <a href="#" className="text-xs text-primary-foreground/40 hover:text-emerald transition-colors">
-              Privacy Policy
+              {t('footer.links.privacy')}
             </a>
             <a href="#" className="text-xs text-primary-foreground/40 hover:text-emerald transition-colors">
-              Terms of Service
+              {t('footer.links.terms')}
             </a>
           </div>
         </div>
